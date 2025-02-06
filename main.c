@@ -41,8 +41,6 @@
 *******************************************************************************/
 #include "cy_pdl.h"
 #include "cybsp.h"
-#include "cy_sysfault.h"
-#include "cy_sysint.h"
 #include "cy_retarget_io.h"
 #include <inttypes.h>
 
@@ -116,10 +114,9 @@ static void handleFaultIrq(void)
     /* Check and display the fault information */
     if (errorSource == CY_SYSFAULT_FLASHC_MAIN_C_ECC)
     {
-        printf("Code Flash correctable ECC fault detected:\r\n");
-        printf("- Address:       0x%" PRIu32 "\r\n", (uint32_t)CY_FLASH_LG_SBM_BASE + faultAddress);
-        printf("- ECC syndromes: 0x%" PRIu32 "(4x syndromes based on 256-bit aligned flash access)\r\n", faultInfo);
-        
+        printf("- Address:       0x%" PRIx32 "\r\n", (uint32_t)CY_FLASH_LG_SBM_BASE + faultAddress);
+        printf("- ECC syndromes: 0x%" PRIx32 "(4x syndromes based on 256-bit aligned flash access)\r\n", faultInfo);
+
         if (g_flashReadData == CORRECT_DATA)
         {
             printf("TEST OK!\r\n");
@@ -131,7 +128,7 @@ static void handleFaultIrq(void)
     }
     else
     {
-        printf("TEST ERROR: Unexpected fault source (0x%" PRIu32 ") detected!\r\n", (uint32_t)errorSource);
+        printf("TEST ERROR: Unexpected fault source (0x%" PRIx32 ") detected!\r\n", (uint32_t)errorSource);
     }
 
     /* Set flag so that test code can check that the IRQ has occurred */
@@ -408,6 +405,9 @@ int main(void)
         CY_ASSERT(0);
     }
 
+    SCB_DisableICache();
+    SCB_DisableDCache();
+
     /* Enable global interrupts */
     __enable_irq();
 
@@ -426,8 +426,8 @@ int main(void)
     correctParity = getParityForValue(FLASH_TEST_VAR);
 
     printf("Info about test variable in flash\r\n");
-    printf("- Address:            0x%" PRIu32 "\r\n", (uint32_t)&FLASH_TEST_VAR);
-    printf("- Correct ECC Parity: 0x%" PRIu8 "\r\n", correctParity);
+    printf("- Address:            0x%" PRIx32 "\r\n", (uint32_t)&FLASH_TEST_VAR);
+    printf("- Correct ECC Parity: 0x%02x \r\n", correctParity);
     printf("\r\n");
 
     printf("Test step 1: Inject correct parity to prove correctness of ECC parity calculation\r\n");    
