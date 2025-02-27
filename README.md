@@ -4,12 +4,12 @@ This code example demonstrates the usage of the error correcting code (ECC) erro
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce240950-flash-ecc-injection)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA5NTAiLCJTcGVjIE51bWJlciI6IjAwMi00MDk1MCIsIkRvYyBUaXRsZSI6IlBETDogRmxhc2ggRUNDIGVycm9yIGluamVjdGlvbiIsInJpZCI6InR1c2EiLCJEb2MgdmVyc2lvbiI6IjEuMS4wIiwiRG9jIExhbmd1YWdlIjoiRW5nbGlzaCIsIkRvYyBEaXZpc2lvbiI6Ik1DRCIsIkRvYyBCVSI6IkFVVE8iLCJEb2MgRmFtaWx5IjoiQVVUTyBNQ1UifQ==)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA5NTAiLCJTcGVjIE51bWJlciI6IjAwMi00MDk1MCIsIkRvYyBUaXRsZSI6IlBETDogRmxhc2ggRUNDIGVycm9yIGluamVjdGlvbiIsInJpZCI6InR1c2EiLCJEb2MgdmVyc2lvbiI6IjIuMC4wIiwiRG9jIExhbmd1YWdlIjoiRW5nbGlzaCIsIkRvYyBEaXZpc2lvbiI6Ik1DRCIsIkRvYyBCVSI6IkFVVE8iLCJEb2MgRmFtaWx5IjoiQVVUTyBNQ1UifQ==)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.4 or later (tested with v3.4)
 - Board support package (BSP) minimum required version:
    - [KIT_T2G_C-2D-6M_LITE](https://www.infineon.com/cms/en/product/evaluation-boards/kit_t2g_c-2d-6m_lite/): v1.0
 - Programming language: C
@@ -255,6 +255,7 @@ Version | Description of change
 ------- | ---------------------
 1.0.0   | New code example.
 1.1.0   | Fixed wrong character display.
+2.0.0   | Updated to support ModusToolbox&trade; software v3.4
 <br>
 
 All referenced product or service names and trademarks are the property of their respective owners.
