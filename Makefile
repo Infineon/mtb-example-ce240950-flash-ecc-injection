@@ -7,8 +7,8 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2018-2025, Cypress Semiconductor Corporation (an Infineon company)
-# SPDX-License-Identifier: Apache-2.0
+# (c) 2018-2026, Infineon Technologies AG, or an affiliate of Infineon
+# Technologies AG.  SPDX-License-Identifier: Apache-2.0
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ MTB_TYPE=COMBINED
 # To change the target, it is recommended to use the Library manager
 # ('make library-manager' from command line), which will also update Eclipse IDE launch
 # configurations.
-TARGET=KIT_T2G_C-2D-6M_LITE
+TARGET=KIT_T2G_C-2D-4M_LITE
 
 # Name of application (used to derive name of final linked file).
 #
